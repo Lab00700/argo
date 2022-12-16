@@ -17,7 +17,7 @@ spec:
         app: yj-serviceb
     spec:
       containers:
-      - image: rnjsxorl3075/serviceb:latest
+      - image: rnjsxorl3075/serviceb:7
         name: yj-serviceb
         ports:
         - containerPort: 8080
