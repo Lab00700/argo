@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yjdeployment
+  labels:
+    app: yj-servicea
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: yj-servicea
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: yj-servicea
+    spec:
+      containers:
+      - image: rnjsxorl3075/servicea:latest
+        name: yj-servicea
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: Always
