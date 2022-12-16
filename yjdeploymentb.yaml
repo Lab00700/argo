@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: yjdeploymenta
+  name: yjdeploymentb
   labels:
-    app: yj-servicea
+    app: yj-serviceb
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: yj-servicea
+      app: yj-serviceb
   strategy: {}
   template:
     metadata:
       labels:
-        app: yj-servicea
+        app: yj-serviceb
     spec:
       containers:
-      - image: rnjsxorl3075/servicea:33
-        name: yj-servicea
+      - image: rnjsxorl3075/serviceb:latest
+        name: yj-serviceb
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
