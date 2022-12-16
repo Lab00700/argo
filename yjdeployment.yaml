@@ -17,7 +17,7 @@ spec:
         app: yj-servicea
     spec:
       containers:
-      - image: rnjsxorl3075/servicea:latest
+      - image: rnjsxorl3075/servicea:1
         name: yj-servicea
         ports:
         - containerPort: 8080
